@@ -18,7 +18,7 @@ def content():
 @rx.page(
         title="Comandos de linux by Sergio Ruiz",
         description="Documentación de comandos linux para distintos propósitos de desarrollo",
-        image="/assets/logo.jpg"
+        image="/logo.jpg"
 )
 def index() -> rx.Component:
     return rx.center(
