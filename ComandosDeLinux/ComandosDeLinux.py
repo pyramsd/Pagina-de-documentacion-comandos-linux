@@ -8,10 +8,6 @@ from ComandosDeLinux.views.menu import menu
 class State(rx.State):
     """The app state."""
 
-@rx.page(
-        title="Comandos de linux by Sergio Ruiz",
-        description="Documentación de comandos linux para distintos propósitos de desarrollo",
-)
 
 def content():
     return rx.box(
@@ -19,6 +15,10 @@ def content():
         rx.text("This is the main content of the page."),
     )
 
+@rx.page(
+        title="Comandos de linux by Sergio Ruiz",
+        description="Documentación de comandos linux para distintos propósitos de desarrollo",
+)
 def index() -> rx.Component:
     return rx.center(
         rx.vstack(
