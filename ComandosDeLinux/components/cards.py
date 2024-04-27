@@ -1,6 +1,6 @@
 import reflex as rx
 
-widths = ["350px", "350px", "450px", "900px", "900px"]
+widths = ["350px", "350px", "500px", "900px", "900px"]
 
 def cards() -> rx.Component:
     return rx.vstack(
