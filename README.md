@@ -4,4 +4,6 @@
 ![alt text](preview_img.png)
 
 ## Celular
-    ![alt text](preview_cell.png) 
+<p align=center>
+  <img src="./preview_cell.png"/>
+</p>
