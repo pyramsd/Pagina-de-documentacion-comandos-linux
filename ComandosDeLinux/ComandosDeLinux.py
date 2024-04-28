@@ -15,10 +15,16 @@ def content():
         rx.text("This is the main content of the page."),
     )
 
+meta = [
+    {"name": "theme_color", "content": "#FFFFFF"},
+    {"char_set": "UTF-8"},
+    {"property": "og:url", "content": "url"},
+]
 @rx.page(
         title="Comandos de linux by Sergio Ruiz",
         description="Documentación de comandos linux para distintos propósitos de desarrollo",
         image="/splash.png",
+        meta=meta,
 )
 def index() -> rx.Component:
     return rx.center(
