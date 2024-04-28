@@ -5,15 +5,6 @@ from ComandosDeLinux.views.documentation import documentation
 from ComandosDeLinux.views.footer import footer
 from ComandosDeLinux.views.menu import menu
 
-class State(rx.State):
-    """The app state."""
-
-
-def content():
-    return rx.box(
-        rx.heading("Welcome to My App"),
-        rx.text("This is the main content of the page."),
-    )
 
 @rx.page(
         title="Comandos de linux by Sergio Ruiz",
@@ -22,6 +13,7 @@ def content():
 )
 def index() -> rx.Component:
     return rx.center(
+        rx.script("document.documentElement.lang='es'"),
         rx.vstack(
             rx.center(
                 rx.fragment(navbar(), rx.container(header(), max_width="60em")),
