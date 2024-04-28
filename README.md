@@ -5,5 +5,5 @@
 
 ## Celular
 <center>
-<img src="preview_cell.png" alt="preview en celular">
+<img src="./preview_cell.png" alt="preview en celular">
 </center>
