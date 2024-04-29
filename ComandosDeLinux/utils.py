@@ -4,7 +4,7 @@ import reflex as rx
 def lang() -> rx.Component:
     return rx.script("document.documentElement.lang='es'")
 
-preview = "/assets/preview.jpg"
+preview = "https://i.postimg.cc/4ysgdBKh/preview.jpg"
 
 _meta = [
     {"name": "og:type", "content": "website"},
