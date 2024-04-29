@@ -1,6 +1,6 @@
 import reflex as rx
+import ComandosDeLinux.constants as const
 
-displays=["none", "none", "none", "flex", "flex"]
 
 def navbar() -> rx.Component:
     return rx.hstack(
@@ -8,8 +8,8 @@ def navbar() -> rx.Component:
                 width="bold",
                 size="4", align="center", color="white"),
         rx.spacer(),
-        rx.flex(rx.link(rx.icon("github", size=30), href="https://github.com/pyramsd", is_external=True),
-        rx.link(rx.icon("instagram", size=30), href="https://www.instagram.com/_sergio_ruiz_21_", is_external=True),
+        rx.flex(rx.link(rx.icon("github", size=30), href=const.GITHUB_URL, is_external=True),
+        rx.link(rx.icon("instagram", size=30), href=const.INSTAGRAM_URL, is_external=True),
         direcction="row", spacing="3"),
         position="sticky",
         padding="1em",
