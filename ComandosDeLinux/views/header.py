@@ -9,11 +9,12 @@ def header() -> rx.Component:
                 radius="full"
             ),
             rx.text("Para mayor información acerca los comandos puedes visitar la página ",
-                    rx.link("man7.org", href="https://man7.org/linux/man-pages", underline="always", is_external=True), align="center"), 
+                    rx.link("man7.org", href="https://man7.org/linux/man-pages", underline="always", 
+                            is_external=True), align="center", color="white"), 
             
             rx.text("También puedes escribir en la terminal ",
                     rx.code("[comando] --help/-h"), " o ",
-                    rx.code("man [comando]"), align="center")
+                    rx.code("man [comando]"), align="center", color="white")
 
         ,align="center")
     )

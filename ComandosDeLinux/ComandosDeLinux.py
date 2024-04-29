@@ -32,15 +32,24 @@ def index() -> rx.Component:
 style={
     "background-color":"#0C1119",
     "box_sizing": "border_box",
+    rx.blockquote:{
+        "color":"white"
+    },
     rx.card:{
         "background-color":"#0C1119",
         "border_width":"2px",
-        "border_color":"white"}
+        "border_color":"white"},
+    rx.chakra.menu_list:{
+        "background-color":"#2d3748"
+    },
+    rx.chakra.menu_item:{
+        "background-color":"#2d3748"
+    }
 }
 
 app = rx.App(style=style,
     theme=rx.theme(
-        appearance="dark", has_background=False, accent_color="teal"
+        appearance="dark", has_background=True, accent_color="blue"
         )
     )
 app.add_page(index)
