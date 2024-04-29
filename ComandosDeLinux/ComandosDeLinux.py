@@ -49,7 +49,7 @@ style={
 
 app = rx.App(style=style,
     theme=rx.theme(
-        appearance="dark", has_background=True, accent_color="blue"
+        appearance="dark", has_background=False, accent_color="teal"
         )
     )
 app.add_page(index)
