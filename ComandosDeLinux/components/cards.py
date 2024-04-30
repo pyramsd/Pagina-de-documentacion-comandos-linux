@@ -1,6 +1,5 @@
 import reflex as rx
-
-widths = ["350px", "350px", "550px", "900px", "900px"]
+from ComandosDeLinux.styles.styles import cards_widths
 
 def cards() -> rx.Component:
     return rx.vstack(
@@ -42,7 +41,7 @@ def cards() -> rx.Component:
                         rx.code_block("""nano [nombre de archivo]""", language="bash",
                                        width="100%", font_size="0.8em", theme="dark"), width="100%"), 
             spacing="4"
-        ), width=widths, variant="surface", id="iniciandoEnLinux"),
+        ), width=cards_widths, variant="surface", id="iniciandoEnLinux"),
 
         rx.card(rx.vstack(
             rx.text("Gestión de usuarios y grupos", color_scheme="teal", size="3"),
@@ -70,7 +69,7 @@ def cards() -> rx.Component:
                          rx.code_block("""groupdel [nombre del grupo]""", language="bash",
                                        width="100%", font_size="0.8em", theme="dark"), width="100%"),
             spacing="4"
-        ), width=widths, variant="surface", id="gestionUsuariosGrupos"),
+        ), width=cards_widths, variant="surface", id="gestionUsuariosGrupos"),
 
         rx.card(rx.vstack(
             rx.text("Gestión de procesos", color_scheme="teal", size="3"),
@@ -114,7 +113,7 @@ def cards() -> rx.Component:
                          rx.code_block("""nohup""", language="bash",
                                        width="100%", font_size="0.8em", theme="dark"), width="100%"),
             spacing="4",
-        ), width=widths, variant="surface", id="gestionProcesos"),
+        ), width=cards_widths, variant="surface", id="gestionProcesos"),
 
         rx.card(rx.vstack(
             rx.text("Gestión de paquetes", color_scheme="teal", size="3"),
@@ -134,7 +133,7 @@ def cards() -> rx.Component:
                         rx.code_block("""pacman""", language="bash",
                                       width="100%", font_size="0.8em", theme="dark"), width="100%"),               
             spacing="4"
-        ), width=widths, variant="surface", id="gestionPaquetes"),
+        ), width=cards_widths, variant="surface", id="gestionPaquetes"),
 
         rx.card(rx.vstack(
             rx.text("Gestión de redes y conectividad", color_scheme="teal", size="3"),
@@ -182,7 +181,7 @@ def cards() -> rx.Component:
                          rx.code_block("""nmcli""", language="bash",
                                        width="100%", font_size="0.8em", theme="dark"), width="100%"),
                     spacing="4"
-        ), width=widths, variant="surface", id="redesConectividad"),
+        ), width=cards_widths, variant="surface", id="redesConectividad"),
         
         rx.card(rx.vstack(
             rx.text("Programación de tareas", color_scheme="teal", size="3"),
@@ -194,7 +193,7 @@ def cards() -> rx.Component:
                          rx.code_block("""at""", language="bash",
                                        width="100%", font_size="0.8em", theme="dark"), width="100%"),
             spacing="4"
-        ), width=widths, variant="surface", id="programacionTareas"),
+        ), width=cards_widths, variant="surface", id="programacionTareas"),
 
         rx.card(rx.vstack(
             rx.text("Monitoreo y registro del sistema", color_scheme="teal", size="3"),
@@ -246,7 +245,7 @@ def cards() -> rx.Component:
                          rx.code_block("""mpstat""", language="bash",
                                        width="100%", font_size="0.8em", theme="dark"), width="100%"),
                     spacing="4"
-        ), width=widths, variant="surface", id="administracionSistema"),
+        ), width=cards_widths, variant="surface", id="administracionSistema"),
 
         rx.card(rx.vstack(
             rx.text("Gestión de permisos de archivos", color_scheme="teal", size="3"),
@@ -262,7 +261,7 @@ def cards() -> rx.Component:
                          rx.code_block("""chgrp""", language="bash",
                                        width="100%", font_size="0.8em", theme="dark"), width="100%"),
             spacing="4"
-        ), width=widths, variant="surface", id="gestionPermisosArchivos"),
+        ), width=cards_widths, variant="surface", id="gestionPermisosArchivos"),
 
         rx.card(rx.vstack(
             rx.text("Gestión de discos y almacenamiento", color_scheme="teal", size="3"),
@@ -286,7 +285,7 @@ def cards() -> rx.Component:
                          rx.code_block("""umount""", language="bash",
                                        width="100%", font_size="0.8em", theme="dark"), width="100%"),
             spacing="4"
-        ), width=widths, variant="surface", id="gestionDiscosAlmacenamiento"),
+        ), width=cards_widths, variant="surface", id="gestionDiscosAlmacenamiento"),
 
         rx.card(rx.vstack(
             rx.text("Gestión de archivos comprimidos", color_scheme="teal", size="3"),
@@ -306,7 +305,7 @@ def cards() -> rx.Component:
                          rx.code_block("""bzip2 / bunzip2""", language="bash",
                                        width="100%", font_size="0.8em", theme="dark"), width="100%"),
             spacing="4"
-        ), width=widths, variant="surface", id="gestionArchivosComprimidos"),
+        ), width=cards_widths, variant="surface", id="gestionArchivosComprimidos"),
 
         rx.card(rx.vstack(
             rx.text("Virtualización y contenedores", color_scheme="teal", size="3"),
@@ -326,7 +325,7 @@ def cards() -> rx.Component:
                         rx.code_block("""kvm""", language="bash",
                                       width="100%", font_size="0.8em", theme="dark"), width="100%"),               
             spacing="4"
-        ), width=widths, variant="surface", id="virtualizacionContenedores"),
+        ), width=cards_widths, variant="surface", id="virtualizacionContenedores"),
 
         rx.card(rx.vstack(
             rx.text("Administración de servicios", color_scheme="teal", size="3"),
@@ -338,7 +337,7 @@ def cards() -> rx.Component:
                          rx.code_block("""service""", language="bash",
                                        width="100%", font_size="0.8em", theme="dark"), width="100%"),
                     spacing="4"
-        ), width=widths, variant="surface", id="administracionServicios"),
+        ), width=cards_widths, variant="surface", id="administracionServicios"),
         top="50px",
         spacing="4",
         width="100%"

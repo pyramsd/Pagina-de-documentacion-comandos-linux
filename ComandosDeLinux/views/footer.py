@@ -1,4 +1,5 @@
 import reflex as rx
+import ComandosDeLinux.styles.styles as Style
 
 def footer() -> rx.Component:
     return rx.hstack(

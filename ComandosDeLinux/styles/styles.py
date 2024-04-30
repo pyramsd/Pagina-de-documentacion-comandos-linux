@@ -9,11 +9,8 @@ BASE_STYLE = {
     rx.card:{
         "background-color":"#0C1119",
         "border_width":"2px",
-        "border_color":"white"},
-    #rx.chakra.menu_list:{
-    #    "background-color":"#2d3748"
-    #},
-    #rx.chakra.menu_item:{
-    #    "background-color":"#2d3748"
-    #}
+        "border_color":"white"}
 }
+
+question_widths = ["350px", "350px", "550px", "550px", "550px"]
+cards_widths = ["350px", "350px", "550px", "550px", "550px"]
