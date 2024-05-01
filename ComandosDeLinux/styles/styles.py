@@ -12,5 +12,5 @@ BASE_STYLE = {
         "border_color":"white"}
 }
 
-question_widths = ["350px", "350px", "550px", "550px", "550px"]
-cards_widths = ["350px", "350px", "550px", "550px", "550px"]
+question_widths = ["350px", "350px", "550px", "650px", "650px"]
+cards_widths = ["350px", "350px", "550px", "950px", "950px"]
