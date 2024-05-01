@@ -105,7 +105,7 @@ def quiz() -> rx.Component:
                               lambda answer: State.set_answers(answer, 11, 2)),
 
                 rx.hstack(
-                    rx.button("Submit", on_click=State.submit),
+                    rx.button("Submit", bg="red", on_click=State.submit),
                     rx.spacer(),
                     rx.button("Página principal", on_click=lambda: rx.redirect(Route.INDEX.value))),
                 footer(),
