@@ -56,7 +56,7 @@ def quiz() -> rx.Component:
                               lambda answer: State.set_answers(answer, 4, 2)),
                 
                 question_card("Preguna 6",
-                              "Indica el comando para mostrat o configurar el nombre del host:",
+                              "Indica el comando para mostrar o configurar el nombre del host:",
                               "iostat", "journalctl", "hostname",
                               lambda answer: State.set_answers(answer, 5, 0),
                               lambda answer: State.set_answers(answer, 5, 1),
@@ -70,7 +70,7 @@ def quiz() -> rx.Component:
                               lambda answer: State.set_answers(answer, 6, 2)),
                 
                 question_card("Preguna 8",
-                              "Indica el comando para ostrar el espacio en disco disponible y utilizado",
+                              "Indica el comando para mostrar el espacio en disco disponible y utilizado",
                               "df", "fdisk", "mount",
                               lambda answer: State.set_answers(answer, 7, 0),
                               lambda answer: State.set_answers(answer, 7, 1),
@@ -84,7 +84,7 @@ def quiz() -> rx.Component:
                               lambda answer: State.set_answers(answer, 8, 2)),
                 
                 question_card("Preguna 10",
-                              "Indica los comandos para mostra información acerca de las interfaces de red",
+                              "Indica los comandos para mostrar información acerca de las interfaces de red",
                               "ifconfig", "ip", "ping",
                               lambda answer: State.set_answers(answer, 9, 0),
                               lambda answer: State.set_answers(answer, 9, 1),
