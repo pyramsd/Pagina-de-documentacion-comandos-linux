@@ -6,7 +6,7 @@ def footer() -> rx.Component:
                 rx.text.strong(" Sergio Ruiz"),
                 width="bold",
                 size="2", color="white"),
-        padding="1em",
+        padding="0.5em",
         width="100%",
         align="center",
         justify="center"

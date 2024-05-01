@@ -9,7 +9,7 @@ def navbar() -> rx.Component:
                 width="bold",
                 size="4", align="center", color="white"),
         rx.spacer(),
-        rx.flex(rx.button("Quiz!", on_click=lambda: rx.redirect(Route.QUIZ.value)),
+        rx.flex(
                 rx.link(rx.icon("github", size=30), href=const.GITHUB_URL, is_external=True),
                 rx.link(rx.icon("instagram", size=30), href=const.INSTAGRAM_URL, is_external=True),
                 direcction="row", spacing="3"),

@@ -5,6 +5,7 @@ from ComandosDeLinux.views.header import header
 from ComandosDeLinux.views.cards import cards
 from ComandosDeLinux.views.footer import footer
 from ComandosDeLinux.views.menu import menu
+from ComandosDeLinux.routes import Route
 
 
 @rx.page(
@@ -19,6 +20,7 @@ def index() -> rx.Component:
             rx.center(
                 rx.fragment(navbar(), rx.container(header(), max_width="60em")),
                 cards(),
+                rx.button("Quiz!", on_click=lambda: rx.redirect(Route.QUIZ.value)),
                 footer(),
                 align="center",
                 direction="column",
