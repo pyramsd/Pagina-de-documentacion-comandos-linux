@@ -2,7 +2,7 @@ import reflex as rx
 import ComandosDeLinux.utils as utils
 from ComandosDeLinux.components.navbar import navbar
 from ComandosDeLinux.views.header import header
-from ComandosDeLinux.views.documentation import documentation
+from ComandosDeLinux.views.cards import cards
 from ComandosDeLinux.views.footer import footer
 from ComandosDeLinux.views.menu import menu
 
@@ -18,7 +18,7 @@ def index() -> rx.Component:
         rx.vstack(
             rx.center(
                 rx.fragment(navbar(), rx.container(header(), max_width="60em")),
-                documentation(),
+                cards(),
                 footer(),
                 align="center",
                 direction="column",

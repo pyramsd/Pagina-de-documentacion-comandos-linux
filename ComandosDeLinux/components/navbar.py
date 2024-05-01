@@ -18,5 +18,5 @@ def navbar() -> rx.Component:
         width="100%",
         align="center",
         z_index="1",
-        id="navbar"
+        id="comandosdelinux"
     )

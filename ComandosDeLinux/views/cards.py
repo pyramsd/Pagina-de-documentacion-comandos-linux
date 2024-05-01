@@ -340,5 +340,6 @@ def cards() -> rx.Component:
         ), width=cards_widths, variant="surface", id="administracionServicios"),
         top="50px",
         spacing="4",
-        width="100%"
+        width="100%",
+        align="center"
     )

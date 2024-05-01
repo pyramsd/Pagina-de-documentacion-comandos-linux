@@ -1,5 +1,8 @@
 import reflex as rx
 from ComandosDeLinux.styles.styles import question_widths
+from ComandosDeLinux.routes import Route
+import ComandosDeLinux.utils as utils
+from ComandosDeLinux.state.state import State as State
 
 
 def render_answer(State, index):
@@ -16,23 +19,13 @@ def render_answer(State, index):
         rx.table.cell(State.answer_key[index].to_string()),
     )
 
-'''@rx.page(
-        route=Route.RESULTS.value,
-        title=utils.results_title,
-        description=utils.results_description,
-        meta=utils.results_meta
-)'''
+
 def results(State):
     """The results view."""
     return rx.center(
         rx.vstack(
-            rx.heading("Results", size="8"),
+            rx.heading("Resultados:", size="8"),
             rx.divider(),
-            rx.chakra.circular_progress(
-                    rx.chakra.circular_progress_label(State.percent_score),
-                    value=State.score,
-                size="3em"
-            ),
             rx.table.root(
                 rx.table.header(
                     rx.table.row(
@@ -49,5 +42,14 @@ def results(State):
             rx.box(rx.link(rx.button("Intentalo otra vez!"), href="/quiz")),
             width=question_widths,
         ),
-        padding="1em"
+        padding="1em",
     )
+
+@rx.page(
+        route=Route.RESULTS.value,
+        title=utils.results_title,
+        description=utils.results_description,
+        meta=utils.results_meta
+)
+def result():
+    return results(State)

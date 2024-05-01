@@ -4,46 +4,7 @@ from ComandosDeLinux.components.quiz_navbar import quiz_navbar
 from ComandosDeLinux.views.footer import footer
 from ComandosDeLinux.routes import Route
 from ComandosDeLinux.components.question_card import question_card
-#from ComandosDeLinux.state.state import State
-from .results import results
-
-import copy
-from typing import Any, List
-
-class State(rx.State):
-    """The app state."""
-    default_answers = [[False, False, False], [False, False, False], [False, False, False],
-                       [False, False, False], [False, False, False], [False, False, False],
-                       [False, False, False], [False, False, False], [False, False, False],
-                       [False, False, False], [False, False, False], [False, False, False]]
-    answers: List[Any]
-    answer_key = [[True, False, False], [False, True, False], [False, True, False],
-                  [False, True, False], [False, False, True], [False, False, True],
-                  [True, False, False], [True, False, False], [True, False, False],
-                  [True, True, False], [False, True, False], [False, False, True]]
-    score: int
-
-    def onload(self):
-        self.answers = copy.deepcopy(self.default_answers)
-
-    def set_answers(self, answer, index, sub_index=None):
-        if sub_index is None:
-            self.answers[index] = answer
-        else:
-            self.answers[index][sub_index] = answer
-
-    def submit(self):
-        total, correct = 0, 0
-        for i in range(len(self.answers)):
-            if self.answers[i] == self.answer_key[i]:
-                correct += 1
-            total += 1
-        self.score = int(correct / total * 100)
-        return rx.redirect("/result")
-    
-    @rx.var
-    def percent_score(self):
-        return f"{self.score}%"
+from ComandosDeLinux.state.state import State
 
 
 @rx.page(
@@ -144,7 +105,7 @@ def quiz() -> rx.Component:
                               lambda answer: State.set_answers(answer, 11, 2)),
 
                 rx.hstack(
-                    rx.button("Submit", bg="black", color="white", width="6em", padding="1em", on_click=State.submit),
+                    rx.button("Submit", on_click=State.submit),
                     rx.spacer(),
                     rx.button("Página principal", on_click=lambda: rx.redirect(Route.INDEX.value))),
                 footer(),
@@ -156,6 +117,3 @@ def quiz() -> rx.Component:
             width="100%"
         )
     )
-@rx.page(route="/result")
-def result():
-    return results(State)
