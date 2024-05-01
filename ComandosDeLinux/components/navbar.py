@@ -1,6 +1,5 @@
 import reflex as rx
 import ComandosDeLinux.constants as const
-from ComandosDeLinux.routes import Route
 
 
 def navbar() -> rx.Component:
