@@ -39,8 +39,10 @@ def results(State):
                     rx.foreach(State.answers, lambda answer, i: render_answer(State, i)),
                 ), width=question_widths,
             ), 
-            rx.box(rx.link(rx.button("Intentalo otra vez!"), href="/quiz")),
-            width=question_widths,
+            rx.hstack(rx.box(rx.link(rx.button("Intentalo otra vez!"), href="/quiz")),
+            rx.spacer(),
+            rx.button("Página principal", on_click=lambda: rx.redirect(Route.INDEX.value))),
+            width=question_widths, align="center"
         ),
         padding="1em",
     )
