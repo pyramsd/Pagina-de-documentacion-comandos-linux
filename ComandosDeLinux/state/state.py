@@ -1,6 +1,7 @@
 import reflex as rx
 import copy
 from typing import Any, List
+from ComandosDeLinux.data import quiz_data
 
 class State(rx.State):
     """The app state."""
@@ -9,10 +10,7 @@ class State(rx.State):
                        [False, False, False], [False, False, False], [False, False, False],
                        [False, False, False], [False, False, False], [False, False, False]]
     answers: List[Any]
-    answer_key = [[True, False, False], [False, True, False], [False, True, False],
-                  [False, True, False], [False, False, True], [False, False, True],
-                  [True, False, False], [True, False, False], [True, False, False],
-                  [True, True, False], [False, True, False], [False, False, True]]
+    answer_key = [item["correct"] for item in quiz_data]
     score: int
 
     def onload(self):
@@ -32,3 +30,19 @@ class State(rx.State):
             total += 1
         self.score = int(correct / total * 100)
         return rx.redirect("/resultados")
+
+    @rx.var
+    def user_answers_str(self) -> list[str]:
+        result = []
+        for i, answer in enumerate(self.answers):
+            answer_indices = [j for j, x in enumerate(answer) if x]
+            result.append(", ".join([quiz_data[i]["answers"][j] for j in answer_indices]))
+        return result
+
+    @rx.var
+    def correct_answers_str(self) -> list[str]:
+        result = []
+        for i, answer in enumerate(self.answer_key):
+            answer_indices = [j for j, x in enumerate(answer) if x]
+            result.append(", ".join([quiz_data[i]["answers"][j] for j in answer_indices]))
+        return result
