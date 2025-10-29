@@ -3,6 +3,7 @@ from ComandosDeLinux.styles.styles import question_widths
 from ComandosDeLinux.routes import Route
 import ComandosDeLinux.utils as utils
 from ComandosDeLinux.state.state import State as State
+from ComandosDeLinux.data import quiz_data
 
 
 def render_answer(State, index):
@@ -15,8 +16,8 @@ def render_answer(State, index):
                 rx.icon(tag="x", color="red"),
             )
         ),
-        rx.table.cell(State.answers[index].to_string()),
-        rx.table.cell(State.answer_key[index].to_string()),
+        rx.table.cell(State.user_answers_str[index]),
+        rx.table.cell(State.correct_answers_str[index]),
     )
 
 

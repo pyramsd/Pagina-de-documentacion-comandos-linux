@@ -133,3 +133,66 @@ card_data = {
         ]
     }
 }
+
+quiz_data = [
+    {
+        "question": "Indica el comando para listar el constenido de un directorio:",
+        "answers": ["ls", "cd", "dd"],
+        "correct": [True, False, False]
+    },
+    {
+        "question": "Indica el comando para crear un nuevo usuario:",
+        "answers": ["usermod", "useradd", "groupdel"],
+        "correct": [False, True, False]
+    },
+    {
+        "question": "Indica el comando para mostrar los procesos en tiempo real:",
+        "answers": ["jobs", "top", "kill"],
+        "correct": [False, True, False]
+    },
+    {
+        "question": "Gestor de paquetes de sistema basados en debian:",
+        "answers": ["yum", "apt-get", "pacman"],
+        "correct": [False, True, False]
+    },
+    {
+        "question": "Indica el comando que permita conxión remota de forma segura:",
+        "answers": ["traceroute", "telnet", "ssh"],
+        "correct": [False, False, True]
+    },
+    {
+        "question": "Indica el comando para mostrar o configurar el nombre del host:",
+        "answers": ["iostat", "journalctl", "hostname"],
+        "correct": [False, False, True]
+    },
+    {
+        "question": "Indica el comando para modificar los permisos de un archivo",
+        "answers": ["chmod", "chown", "chgrp"],
+        "correct": [True, False, False]
+    },
+    {
+        "question": "Indica el comando para mostrar el espacio en disco disponible y utilizado",
+        "answers": ["df", "fdisk", "mount"],
+        "correct": [True, False, False]
+    },
+    {
+        "question": "Indica el comando para matar un proceso",
+        "answers": ["kill", "killall", "renice"],
+        "correct": [True, False, False]
+    },
+    {
+        "question": "Indica los comandos para mostrar información acerca de las interfaces de red",
+        "answers": ["ifconfig", "ip", "ping"],
+        "correct": [True, True, False]
+    },
+    {
+        "question": "Indica el comando para mostrar la tabla de enrutamiento del kernel",
+        "answers": ["ping", "route", "ifup"],
+        "correct": [False, True, False]
+    },
+    {
+        "question": "Indica el comando para programar tareas que se ejecuten en momentos específicos",
+        "answers": ["jobs", "nice", "cron"],
+        "correct": [False, False, True]
+    }
+]
